@@ -1,6 +1,6 @@
 const { User } = require("../models");
 const db = require("../models");
-const jwt = requires("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
 async function login(req, res) {
   const user = await User.findOne({
@@ -42,6 +42,8 @@ async function register(req, res) {
     }
   } catch (error) {
     res.status(400).json({ message: "A field is missing", error: error });
+    console.log(error);
+
     return;
   }
 }
