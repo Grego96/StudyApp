@@ -99,8 +99,6 @@ async function storeAdminUser(req, res) {
         email: req.body.email,
       },
       defaults: {
-        first_name: req.body.firstname,
-        last_name: req.body.lastname,
         email: req.body.email,
         password: req.body.password,
         isAdmin: true,
